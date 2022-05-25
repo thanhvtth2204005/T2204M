@@ -2,27 +2,26 @@
 int main(){
 	int arr[100];
 	int n ;
-	printf ("Nhap n :\n");
+	 do{
+ 	printf ("Nhap n :\n");
 	scanf("%d",&n);
+	}
+	while(n<=0);
 	printf("Nhap mang :\n");
 	for (int i = 0; i<n ; i++){
 		scanf("%d",&arr[i]);
 	}
-	int max = 0;
-	int k =0;
-		for (int i = 0 ; i < n ; i++){
-			if (arr[i]>0 && arr[i+1]>0){
-				k+=1;
-			}
+	int max = 0,k=0,i=0;
+	 for(i=0;i<n;i++){
+	 	if (arr[i]>0){
+	 		k++;  
+		    if ( > max){
+		   		makx =k;
+		   }else
+		  		k = 0;
+		  }
 		}
-		if ( k == 0){
-			printf (" Khong co so duong canh nhau trong mang");
-		}else {
-		for (int i =0;i<k;i++){
-			   if (max < k ){
-			   	  max = k;
-			   }
-	    	}
-	    	printf ("\nSo luong so duong lien tiep nhieu nhat la : %d",max);
-		}
-	}
+	 
+	  printf ("\nMax : %d",max);
+	  return 0;
+	}	
